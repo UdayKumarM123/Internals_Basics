@@ -1,0 +1,7 @@
+{
+  "registered_model_name": "testforge-defect-count-predictor",
+  "version": 1,
+  "run_id": "676461e7f9a04d6ea9bd17e06c3cc169",
+  "source_metric": "rmse",
+  "source_metric_value": 1.74592
+}

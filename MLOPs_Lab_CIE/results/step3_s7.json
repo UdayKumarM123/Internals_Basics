@@ -1,0 +1,7 @@
+{
+  "registered_model_name": "testforge-defect-count-predictor",
+  "alias_name": "live",
+  "champion_version": 1,
+  "challenger_version": 2,
+  "action": "promoted"
+}

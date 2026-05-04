@@ -1,0 +1,22 @@
+{
+  "experiment_name": "testforge-defect-count",
+  "models": [
+    {
+      "name": "LinearRegression",
+      "mae": 1.854441,
+      "rmse": 2.045998,
+      "r2": 0.917563,
+      "mape": 15.766833
+    },
+    {
+      "name": "Ridge",
+      "mae": 1.608245,
+      "rmse": 1.74592,
+      "r2": 0.939971,
+      "mape": 13.180452
+    }
+  ],
+  "best_model": "Ridge",
+  "best_metric_name": "rmse",
+  "best_metric_value": 1.74592
+}
