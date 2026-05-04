@@ -11,6 +11,7 @@ import os
 import json
 import math
 import pathlib
+import joblib
 
 import numpy as np
 import pandas as pd
@@ -82,8 +83,13 @@ for model_name, (model, params) in models.items():
         metrics = compute_metrics(y_test.values, y_pred)
         mlflow.log_metrics(metrics)
 
-        # Log model artifact
+        # Log model artifact to MLflow
         mlflow.sklearn.log_model(model, artifact_path=model_name)
+
+        # Save model file to models/ directory
+        model_file = MODELS_DIR / f"{model_name}.pkl"
+        joblib.dump(model, model_file)
+        print(f"Model saved -> {model_file}")
 
         run_id = mlflow.active_run().info.run_id
         print(f"{model_name}: {metrics}  run_id={run_id}")
